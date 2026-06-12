@@ -1,0 +1,7 @@
+{
+  "session_id": "fixture-session-0001",
+  "transcript_path": "/tmp/fixture-transcript.jsonl",
+  "cwd": "/tmp",
+  "hook_event_name": "UserPromptSubmit",
+  "prompt": "why does the WAL sequence skip numbers after a snapshot?"
+}

@@ -1,0 +1,13 @@
+{
+  "session_id": "fixture-session-0001",
+  "transcript_path": "/tmp/fixture-transcript.jsonl",
+  "cwd": "/tmp",
+  "hook_event_name": "PostToolUse",
+  "tool_name": "mcp__plugin_strata-memory_strata__read_document",
+  "tool_input": {
+    "documentId": "doc_01JABCDEFGHJKMNPQRSTVWXYZ0"
+  },
+  "tool_response": {
+    "content": "# Design notes"
+  }
+}

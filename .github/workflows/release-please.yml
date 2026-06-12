@@ -1,0 +1,41 @@
+# Opens/updates a "release PR" that bumps the plugin version
+# (.claude-plugin/plugin.json $.version) and CHANGELOG.md from Conventional
+# Commits since the last release.
+#
+# When the release PR merges, release-please creates the GitHub Release and the
+# matching git tag, then advances the merged PR's `autorelease:` label to
+# `tagged`. The tag is `strata-memory--v<version>` because release-please-config.json
+# sets component "strata-memory" + tag-separator "--" + include-component-in-tag. No
+# separate tagging job is needed.
+#
+# One-time prerequisites (owner action required):
+#   - Settings -> Actions -> General -> Workflow permissions: enable
+#     "Allow GitHub Actions to create and approve pull requests" so the PR can
+#     be opened.
+#   - This workflow runs with the RELEASE_PLEASE_TOKEN secret (a PAT or GitHub
+#     App token), which must stay set: GITHUB_TOKEN-authored PRs do not trigger
+#     workflows, so smoke.yml would not run on the release PR.
+
+name: release-please
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: release-please-${{ github.ref }}
+      cancel-in-progress: false
+    steps:
+      - uses: googleapis/release-please-action@5c625bfb5d1ff62eadeeb3772007f7f66fdcf071 # v4
+        with:
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json

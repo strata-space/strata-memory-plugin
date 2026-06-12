@@ -1,0 +1,13 @@
+{
+  "session_id": "fixture-session-0001",
+  "transcript_path": "/tmp/fixture-transcript.jsonl",
+  "cwd": "/tmp",
+  "hook_event_name": "PostToolUse",
+  "tool_name": "Bash",
+  "tool_input": {
+    "command": "strata api documents get doc_01JABCDEFGHJKMNPQRSTVWXYZ0 --json"
+  },
+  "tool_response": {
+    "stdout": "{}"
+  }
+}
