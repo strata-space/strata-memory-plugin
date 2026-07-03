@@ -26,6 +26,9 @@ done
 log "== every command routes through the dispatcher shim"
 commands=$(jq -r '.hooks[][].hooks[].command' "$HOOKS_FILE")
 while IFS= read -r cmd; do
+  # The single quotes are intentional: match the literal ${CLAUDE_PLUGIN_ROOT}
+  # token in the command string, not an expansion of it.
+  # shellcheck disable=SC2016
   case "$cmd" in
   *'${CLAUDE_PLUGIN_ROOT}/scripts/memory-hook.sh'*)
     ok "command uses shim: $cmd"

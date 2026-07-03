@@ -5,6 +5,9 @@
 # bearing primitives. Scripts run on a clean VM (ubuntu-latest / macos-latest)
 # and exit non-zero on the first failed assertion.
 
+# RUN_HOOK_STDOUT / RUN_HOOK_EXIT are this module's output contract: set by
+# run_hook and read by the sourcing smoke scripts, so they read as unused here.
+# shellcheck disable=SC2034
 set -euo pipefail
 
 PASS=0

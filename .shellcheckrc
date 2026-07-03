@@ -1,0 +1,5 @@
+# Every tests/*.sh smoke runner sources _common.sh through a dynamically
+# computed path (`. "$HERE/_common.sh"`), which shellcheck cannot follow
+# statically. _common.sh is linted directly by the same CI glob, so following
+# it from each caller adds nothing. Silence the unfollowable-source info.
+disable=SC1091
