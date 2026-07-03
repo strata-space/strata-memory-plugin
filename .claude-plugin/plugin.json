@@ -3,7 +3,7 @@
   "name": "strata-memory",
   "displayName": "Strata Memory",
   "description": "Turn a Strata Space into your coding agent's long-term memory. On every prompt the plugin hybrid-searches the bound Space and surfaces relevant documents with a standing contract: if your work changes a fact you relied on, update that document. A stop-time nudge catches forgotten write-backs. Skills: strata-memory-init (bind a Space), strata-memory-status (diagnose the memory loop). Requires the strata CLI (Homebrew).",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "keywords": [
     "strata",
