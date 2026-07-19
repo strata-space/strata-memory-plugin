@@ -64,5 +64,7 @@ jobs:
         run: bash tests/wrapper-passthrough.sh
       - name: wrapper-protocol-shape
         run: bash tests/wrapper-protocol-shape.sh
+      - name: wrapper-version-guard
+        run: bash tests/wrapper-version-guard.sh
       - name: live-cli-smoke (skips without strata CLI installed)
         run: bash tests/live-cli-smoke.sh

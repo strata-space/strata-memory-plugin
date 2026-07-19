@@ -47,15 +47,27 @@ strata memory status --json
 
 - `binding: null`: no Space bound for this repository; fix is
   `strata-memory-init`. Remember the key is the git repo root: launching the
-  agent from a different repo than the one bound is the common surprise
+  agent from a different repo than the one bound is the common surprise. Before
+  concluding memory was never set up, check whether a *sibling* repo is bound —
+  the binding may already exist under a different key:
+
+  ```bash
+  jq -r '.bindings | to_entries[] | "\(.key) -> \(.value.spaceId)"' \
+    "${XDG_DATA_HOME:-$HOME/Library/Application Support}/strata/memory/bindings.json" 2>/dev/null
+  ```
+
+  A bound repo that is not this one means the fix is to bind the same Space
+  here (`strata memory bind <spaceId>`), not to set up from scratch. A current
+  CLI also names sibling bindings in its `SessionStart` output
 - `binding.scope`: `project` comes from committed `.strata/memory.json` and
   wins over a personal binding; if the team binding looks wrong, that file is
   what to inspect
 - `config.strictness`: `off` means the stop nudge never fires; `strict` keeps
   nudging (capped) until a memory document changes version
-- `sessionLedgers`: 0 after a session ran means hooks are not firing; verify
-  the plugin is enabled in this host and the session was restarted after
-  install
+- `sessionLedgers`: sessions for *this repository* only (a current CLI scopes
+  the count to the repo key). 0 after a session ran here means hooks are not
+  firing; verify the plugin is enabled in this host and the session was
+  restarted after install
 
 ## 4. Loop behavior
 
