@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/strata-space/strata-memory-plugin/compare/strata-memory--v0.2.0...strata-memory--v0.3.0) (2026-07-18)
+
+
+### Added
+
+* nudge to upgrade an outdated strata CLI at preflight ([feee8f3](https://github.com/strata-space/strata-memory-plugin/commit/feee8f39918c4e53dec35341bd3e11a68fa8fdf3))
+
 ## [0.2.0](https://github.com/strata-space/strata-memory-plugin/compare/strata-memory--v0.1.0...strata-memory--v0.2.0) (2026-07-03)
 
 
