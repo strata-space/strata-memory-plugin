@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.4.0](https://github.com/strata-space/strata-memory-plugin/compare/strata-memory--v0.3.0...strata-memory--v0.4.0) (2026-07-19)
+
+
+### Added
+
+* nudge to upgrade an outdated strata CLI at preflight ([feee8f3](https://github.com/strata-space/strata-memory-plugin/commit/feee8f39918c4e53dec35341bd3e11a68fa8fdf3))
+* re-run the memory hook after a compaction ([afd178e](https://github.com/strata-space/strata-memory-plugin/commit/afd178e4d316df393bb40881ac3bce3370be8290))
+* strata-memory plugin packaging for Claude Code and Codex ([dba5d25](https://github.com/strata-space/strata-memory-plugin/commit/dba5d2500feb8c29330db72d03daffc97fb3d96f))
+
 ## [0.3.0](https://github.com/strata-space/strata-memory-plugin/compare/strata-memory--v0.2.0...strata-memory--v0.3.0) (2026-07-18)
 
 
