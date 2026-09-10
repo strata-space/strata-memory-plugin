@@ -1,5 +1,7 @@
 # Strata Memory
 
+> This release switches MCP to `https://api.strata.space/mcp`. Update the plugin and authenticate again after the API hostname cutover. Manually configured MCP clients must re-add the server with the new URL.
+
 **Your coding agent forgets everything between sessions. Point it at a
 [Strata](https://strata.space) Space and it stops forgetting.**
 

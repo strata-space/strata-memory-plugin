@@ -42,8 +42,8 @@ wrapper script, two skills, smoke tests. No build step, no package manager
   input. Narrowing a matcher MUST keep `tests/hooks-json-valid.sh`'s
   tool-name coverage green
 - Endpoint literal: the MCP URL in `.mcp.json` is the only hardcoded
-  environment URL. When the stable customer-facing alias lands, update it
-  and bump the version
+  environment URL: `https://api.strata.space/mcp`. When changing it, update
+  every reference and bump the version
 - Skills are executed by the model at runtime: privileged or mutating
   commands MUST be shown verbatim and consent-gated `[y/N]`
   (`strata-memory-init`); diagnosis MUST stay read-only
