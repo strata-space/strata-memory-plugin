@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.0.0](https://github.com/strata-space/strata-memory-plugin/compare/strata-memory--v0.4.0...strata-memory--v1.0.0) (2026-09-22)
+
+
+### ⚠ BREAKING CHANGES
+
+* use canonical api.strata.space MCP endpoint
+
+### Added
+
+* use canonical api.strata.space MCP endpoint ([49bb68b](https://github.com/strata-space/strata-memory-plugin/commit/49bb68b3d6a4669675e2978f46add76589789f25))
+
 ## [0.4.0](https://github.com/strata-space/strata-memory-plugin/compare/strata-memory--v0.3.0...strata-memory--v0.4.0) (2026-07-19)
 
 
